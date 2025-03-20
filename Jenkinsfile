@@ -9,7 +9,7 @@ pipeline {
         stage ("Push") {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'dockerhub') {
+                    withDockerRegistry(credentialsId: 'docker-cred') {
                         sh 'docker push maddularoopeshreddy/projects:bus'
                     }
                 }
